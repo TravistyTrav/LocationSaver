@@ -3,6 +3,7 @@ const app = express()
 const mongoose = require('mongoose')
 const cors = require('cors')
 const bodyParser = require('body-parser')
+const UserRoutes = require('./routes/api/userItem')
 const LocationListRoutes = require('./routes/api/locationList')
 const LocationItemRoutes = require('./routes/api/locationItem')
 const path = require('path')
@@ -20,6 +21,7 @@ mongoose
     .then(() => console.log('MongoDB database Connected...'))
     .catch((err) => console.log(err))
 
+    app.use('/api/userItem', UserRoutes)
     app.use('/api/locationList', LocationListRoutes)
     app.use('/api/locationItem', LocationItemRoutes)
  

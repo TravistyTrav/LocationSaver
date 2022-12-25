@@ -16,6 +16,10 @@ const routes = [
         name: "locationDetails",
         component: () => import("pages/LocationDetails.vue")
       },
+      {
+        path:"/callback",
+        component: () => import("src/pages/CallbackPage.vue")
+      }
     ],
   },
 

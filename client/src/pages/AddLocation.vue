@@ -41,11 +41,7 @@ export default defineComponent({
       //this.title = "";
       //this.description = "";
       this.$router.push('/')
-    },
-    async removeTodo(item, i) {
-      await axios.delete("api/todoList/" + item._id);
-      this.todos.splice(i, 1);
-    },
+    }
   },
   setup() {
     const streetRef = ref();
